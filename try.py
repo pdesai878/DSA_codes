@@ -37,11 +37,11 @@ class MaxHeap:
 
 #get kth smallest element out of array
 arr=[2,3,5,15,-1]
-k=3
+k=2
 
 if 0<k<len(arr):
 	heap=MaxHeap(arr[:k])  #build heap of elements from index 0 to k. O(k)
-	for i in range(k,len(arr)):   #O((n-k)log(k))
+	for i in range(k+1,len(arr)):   #O(klog(n))
 		if arr[i]<heap.heap[0]:
 			heap.heap[0]=arr[i]
 			heap.maxheapify(0)

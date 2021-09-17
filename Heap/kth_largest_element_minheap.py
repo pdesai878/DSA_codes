@@ -34,8 +34,8 @@ class MinHeap:
 		self.heapsize-=1
 		return mn
 
-arr=[2,1]
-k=2
+arr=[1,3,-1,7,10]
+k=3
 #find kth largest           #ans=3
 h=MinHeap(arr[:k])
 for el in arr[k:]:
