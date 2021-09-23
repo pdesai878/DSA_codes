@@ -18,10 +18,10 @@ def union(u,v):
 	u=findparent(u)  #p1
 	v=findparent(v)  #p2
 
-	if rank[p1]<rank[p2]:
-		parent[p1]=p2     #attach smaller rank guy to bigger rank guy
-	elif rank[p1]>rank[p2]:
-		parent[p2]=p1
+	if rank[u]<rank[v]:
+		parent[u]=v     #attach smaller rank guy to bigger rank guy
+	elif rank[u]>rank[v]:
+		parent[v]=u
 	else:
 		parent[v]=u      #if ranks are equal, attach anyone to anyone, rank of parent => increement by 1. This would also inc the height of tree by 1.
 		rank[v]+=1
