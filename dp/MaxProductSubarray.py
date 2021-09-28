@@ -1,21 +1,33 @@
 class Solution:
     def maxProduct(self, nums: List[int]) -> int:
         n=len(nums)
-        prod=1
-        mx=-sys.maxsize
-        for i in range(n):
-            prod*=nums[i]
-            mx=max(mx,prod)
-            if prod==0:
-                prod=1
+        mxproduct=1
+        mnproduct=1
+        res=-sys.maxsize
+        for el in nums:
+            temp=mxproduct*el
+            mxproduct=max(mxproduct*el,mnproduct*el,el)
+            mnproduct=min(temp,mnproduct*el,el)
+            res=max(res,mxproduct)
             
-        prod=1   
-        for i in range(n-1,-1,-1):
-            prod*=nums[i]
-            mx=max(mx,prod)
-            if prod==0:
-                prod=1
-        return mx
+        return res
+
+        # n=len(nums)
+        # prod=1
+        # mx=-sys.maxsize
+        # for i in range(n):
+        #     prod*=nums[i]
+        #     mx=max(mx,prod)
+        #     if prod==0:
+        #         prod=1
+            
+        # prod=1   
+        # for i in range(n-1,-1,-1):
+        #     prod*=nums[i]
+        #     mx=max(mx,prod)
+        #     if prod==0:
+        #         prod=1
+        # return mx
         
         
 #         n=len(nums)
