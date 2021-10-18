@@ -36,6 +36,7 @@ for i in range(n-1,-1,-1):
         print("cd",j,i)
         dicti[nums[j]-nums[i]]+=1
     print(dicti)
+    print('*******************************')
    
 print(res)
 
