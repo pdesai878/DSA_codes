@@ -18,6 +18,6 @@ i=1
 while i*i<=n:
 	if n%i==0:
 		print(i)
-	if i!=n//i:
+	if i!=n//i:        #this condition is necessary. if n=36, the above code will print 6 two times
 		print(n//i)
 	i+=1
