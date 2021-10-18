@@ -11,4 +11,4 @@ for i in range(n):
 
 print(arr)
 
-#time complexity= O(n)
+#time complexity= O(n) space complexity=O(1)
