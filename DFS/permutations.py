@@ -22,3 +22,5 @@ res=[]
 solve(op,nums)
 print(res)
 
+#TC: O(n! * n) since total n! permutations and each time we are looping from o to n
+#SC: O(n)
